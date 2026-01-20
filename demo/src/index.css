@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0d1117;
+  --bg-card: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent-green: #00aa66;
+  --accent-cyan: #58a6ff;
+  --accent-purple: #a371f7;
+  --accent-orange: #f0883e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursor-blink var(--cursor-blink-speed, 800ms) step-end infinite;
+}
+
+.cursor-hidden {
+  opacity: 0;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--accent-green);
+  color: var(--bg-dark);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+.demos {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.demo-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.demo-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-cyan);
+}
+
+.demo-card .description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.demo-output {
+  background: var(--bg-dark);
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 1.25rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.demo-output.terminal {
+  border: 1px solid var(--accent-green);
+}
+
+.demo-output.large {
+  font-size: 2rem;
+  justify-content: center;
+  min-height: 5rem;
+}
+
+.prompt {
+  color: var(--accent-green);
+  margin-right: 0.5rem;
+}
+
+.code-block {
+  background: var(--bg-dark);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-block code {
+  color: var(--text-secondary);
+}
+
+.install-section {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.install-command {
+  display: inline-block;
+  background: var(--bg-card);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 1.125rem;
+  border: 1px solid var(--accent-green);
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.links a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.links a:hover {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: var(--accent-green);
+  text-decoration: none;
+}
