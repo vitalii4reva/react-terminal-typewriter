@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
-  basePath: '/react-terminal-typewriter',
+  basePath: isProd ? '/react-terminal-typewriter' : '',
   images: {
     unoptimized: true
   },

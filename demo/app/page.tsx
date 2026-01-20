@@ -38,9 +38,20 @@ export default function Home() {
 
       <footer className="footer">
         <p>
-          Made with ❤️ by <a href="https://github.com/vitalii4reva" target="_blank" rel="noopener noreferrer">Vitalii Petrenko</a>
+          Created by <a href="https://vitalii4reva.com" target="_blank" rel="noopener noreferrer">Vitalii Petrenko</a>
         </p>
-        <p>MIT License</p>
+        <div className="links" style={{ marginTop: '1rem' }}>
+          <a href="https://github.com/vitalii4reva/react-terminal-typewriter" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a href="https://www.npmjs.com/package/react-terminal-typewriter" target="_blank" rel="noopener noreferrer">
+            npm
+          </a>
+          <a href="https://vitalii4reva.com" target="_blank" rel="noopener noreferrer">
+            Author
+          </a>
+        </div>
+        <p style={{ marginTop: '1rem' }}>MIT License</p>
       </footer>
     </div>
   )

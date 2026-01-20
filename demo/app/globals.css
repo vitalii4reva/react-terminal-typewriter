@@ -154,14 +154,10 @@ body {
   transform: rotate(90deg);
 }
 
-.code-block {
-  background: var(--bg-dark);
-  border-radius: 8px;
-  padding: 1rem;
+.code-block-wrapper {
   margin-top: 0.5rem;
-  font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 0.875rem;
-  overflow-x: auto;
+  border-radius: 8px;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   animation: slideDown 0.2s ease-out;
 }
@@ -175,11 +171,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.code-block code {
-  color: var(--text-secondary);
-  white-space: pre;
 }
 
 .install-section {

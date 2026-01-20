@@ -1,0 +1,198 @@
+# react-terminal-typewriter - Full Documentation
+
+> A lightweight React hook for terminal-style typewriter effects with cursor animation, loop support, and full TypeScript support.
+
+## Features
+
+- Zero dependencies - only React as peer dependency
+- TypeScript support - full type definitions included
+- Loop mode - auto delete and retype text
+- Configurable speeds - separate delays for typing, deleting, and pauses
+- Cursor control - configurable cursor blink speed
+- React 18+ compatible - works with StrictMode
+- Lightweight - ~1KB minified
+
+## Installation
+
+```bash
+npm install react-terminal-typewriter
+# or
+yarn add react-terminal-typewriter
+# or
+pnpm add react-terminal-typewriter
+```
+
+## Quick Start
+
+```tsx
+import { useTypewriter } from 'react-terminal-typewriter'
+
+function App() {
+  const { displayText, cursorBlinkSpeed } = useTypewriter({
+    text: 'Hello, World!',
+    delay: 100,
+    loop: true
+  })
+
+  return (
+    <h1>
+      {displayText}
+      <span 
+        className="cursor"
+        style={{ '--cursor-blink-speed': `${cursorBlinkSpeed}ms` } as React.CSSProperties}
+      />
+    </h1>
+  )
+}
+```
+
+## API Reference
+
+### useTypewriter(options)
+
+#### Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `text` | `string` | *required* | Text to type |
+| `delay` | `number` | `100` | Delay between typing each character (ms) |
+| `startDelay` | `number` | `500` | Delay before starting to type (ms) |
+| `loop` | `boolean` | `false` | Enable loop mode - text will be deleted and retyped |
+| `loopDelay` | `number` | `2000` | Delay before starting to delete (ms) |
+| `deleteDelay` | `number` | `50` | Delay between deleting each character (ms) |
+| `cursorBlinkSpeed` | `number` | `800` | Cursor blink animation speed (ms) |
+
+#### Return Values
+
+| Value | Type | Description |
+|-------|------|-------------|
+| `displayText` | `string` | Current displayed text |
+| `isTyping` | `boolean` | Whether currently typing |
+| `isDeleting` | `boolean` | Whether currently deleting |
+| `isComplete` | `boolean` | Whether typing is complete (only when loop is false) |
+| `cursorBlinkSpeed` | `number` | Cursor blink speed for CSS variable |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+const { displayText } = useTypewriter({
+  text: 'Hello, World!'
+})
+
+return <p>{displayText}</p>
+```
+
+### With Loop
+
+```tsx
+const { displayText, isDeleting } = useTypewriter({
+  text: 'React Terminal Typewriter',
+  loop: true,
+  loopDelay: 3000,
+  deleteDelay: 30
+})
+
+return (
+  <h1 style={{ color: isDeleting ? 'orange' : 'green' }}>
+    {displayText}
+  </h1>
+)
+```
+
+### Terminal Style
+
+```tsx
+const { displayText, cursorBlinkSpeed } = useTypewriter({
+  text: 'npm install react-terminal-typewriter',
+  delay: 50,
+  startDelay: 1000
+})
+
+return (
+  <div className="terminal">
+    <span className="prompt">$ </span>
+    <span>{displayText}</span>
+    <span 
+      className="cursor"
+      style={{ '--cursor-blink-speed': `${cursorBlinkSpeed}ms` } as React.CSSProperties}
+    />
+  </div>
+)
+```
+
+### Custom Cursor Styling
+
+```tsx
+const { displayText, cursorBlinkSpeed } = useTypewriter({
+  text: 'Custom cursor style',
+  cursorBlinkSpeed: 500
+})
+```
+
+## Cursor CSS
+
+```css
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursor-blink var(--cursor-blink-speed, 800ms) step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+```
+
+## TypeScript Types
+
+```typescript
+interface UseTypewriterOptions {
+  text: string
+  delay?: number
+  startDelay?: number
+  loop?: boolean
+  loopDelay?: number
+  deleteDelay?: number
+  cursorBlinkSpeed?: number
+}
+
+interface UseTypewriterReturn {
+  displayText: string
+  isTyping: boolean
+  isDeleting: boolean
+  isComplete: boolean
+  cursorBlinkSpeed: number
+}
+
+function useTypewriter(options: UseTypewriterOptions): UseTypewriterReturn
+```
+
+## Browser Support
+
+- Chrome 80+
+- Firefox 74+
+- Safari 14+
+- Edge 80+
+
+## Links
+
+- Live Demo: https://vitalii4reva.github.io/react-terminal-typewriter/
+- GitHub: https://github.com/vitalii4reva/react-terminal-typewriter
+- npm: https://www.npmjs.com/package/react-terminal-typewriter
+
+## Author
+
+Vitalii Petrenko
+- Website: https://vitalii4reva.com
+- GitHub: https://github.com/vitalii4reva
+
+## License
+
+MIT License - Copyright (c) Vitalii Petrenko

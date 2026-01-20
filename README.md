@@ -3,8 +3,13 @@
 [![npm version](https://badge.fury.io/js/react-terminal-typewriter.svg)](https://www.npmjs.com/package/react-terminal-typewriter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![Demo](https://img.shields.io/badge/Demo-Live-green.svg)](https://vitalii4reva.github.io/react-terminal-typewriter/)
 
 A lightweight React hook for terminal-style typewriter effects with cursor animation, loop support, and full TypeScript support.
+
+## 🚀 [Live Demo](https://vitalii4reva.github.io/react-terminal-typewriter/)
+
+See the hook in action with interactive examples showcasing different configurations.
 
 ## Features
 
@@ -189,6 +194,13 @@ Works in all modern browsers that support ES2020:
 
 Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
 
+## Author
+
+**Vitalii Petrenko**
+- Website: [vitalii4reva.com](https://vitalii4reva.com)
+- GitHub: [@vitalii4reva](https://github.com/vitalii4reva)
+- npm: [vitalii4reva](https://www.npmjs.com/~vitalii4reva)
+
 ## License
 
-MIT © [Vitalii Petrenko](https://github.com/vitalii4reva)
+MIT © [Vitalii Petrenko](https://vitalii4reva.com)

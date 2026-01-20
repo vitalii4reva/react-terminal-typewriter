@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
+import { CodeBlock } from './CodeBlock'
 
 interface DemoCardProps {
   title: string
@@ -34,8 +35,8 @@ export function DemoCard({ title, description, code, children }: DemoCardProps) 
         {isOpen ? 'Hide Code' : 'Show Code'}
       </button>
       {isOpen && (
-        <div className="code-block">
-          <code>{code}</code>
+        <div className="code-block-wrapper">
+          <CodeBlock code={code} />
         </div>
       )}
     </div>

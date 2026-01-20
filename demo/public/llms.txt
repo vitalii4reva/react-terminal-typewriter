@@ -1,0 +1,59 @@
+# react-terminal-typewriter
+
+> A lightweight React hook for terminal-style typewriter effects with cursor animation, loop support, and full TypeScript support. Zero dependencies, ~1KB minified.
+
+## Installation
+
+```bash
+npm install react-terminal-typewriter
+```
+
+## Quick Start
+
+```tsx
+import { useTypewriter } from 'react-terminal-typewriter'
+
+function App() {
+  const { displayText, cursorBlinkSpeed } = useTypewriter({
+    text: 'Hello, World!',
+    delay: 100,
+    loop: true
+  })
+
+  return <h1>{displayText}</h1>
+}
+```
+
+## API Reference
+
+### Options
+
+- `text` (string, required): Text to type
+- `delay` (number, default: 100): Delay between typing each character (ms)
+- `startDelay` (number, default: 500): Delay before starting to type (ms)
+- `loop` (boolean, default: false): Enable loop mode
+- `loopDelay` (number, default: 2000): Delay before starting to delete (ms)
+- `deleteDelay` (number, default: 50): Delay between deleting each character (ms)
+- `cursorBlinkSpeed` (number, default: 800): Cursor blink animation speed (ms)
+
+### Return Values
+
+- `displayText` (string): Current displayed text
+- `isTyping` (boolean): Whether currently typing
+- `isDeleting` (boolean): Whether currently deleting
+- `isComplete` (boolean): Whether typing is complete (only when loop is false)
+- `cursorBlinkSpeed` (number): Cursor blink speed for CSS variable
+
+## Links
+
+- [Live Demo](https://vitalii4reva.github.io/react-terminal-typewriter/)
+- [GitHub Repository](https://github.com/vitalii4reva/react-terminal-typewriter)
+- [npm Package](https://www.npmjs.com/package/react-terminal-typewriter)
+
+## Author
+
+Vitalii Petrenko - https://vitalii4reva.com
+
+## License
+
+MIT

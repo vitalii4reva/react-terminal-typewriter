@@ -4,6 +4,11 @@ node_modules/
 # Build output
 dist/
 
+# Next.js (demo)
+demo/.next/
+demo/out/
+demo/.env*.local
+
 # IDE
 .idea/
 .vscode/
@@ -23,6 +28,17 @@ coverage/
 
 # Package manager files
 *.tgz
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
