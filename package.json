@@ -1,0 +1,59 @@
+{
+  "name": "react-terminal-typewriter",
+  "version": "1.0.0",
+  "description": "A lightweight React hook for terminal-style typewriter effects with cursor animation, loop support, and full TypeScript support",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "typewriter",
+    "typing",
+    "terminal",
+    "animation",
+    "cursor",
+    "effect",
+    "typescript"
+  ],
+  "author": "Vitalii Petrenko <vitalii4reva@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitalii4reva/react-terminal-typewriter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitalii4reva/react-terminal-typewriter/issues"
+  },
+  "homepage": "https://github.com/vitalii4reva/react-terminal-typewriter#readme",
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "react": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
